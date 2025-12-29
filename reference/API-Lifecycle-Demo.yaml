@@ -174,9 +174,36 @@ paths:
                     x-stoplight:
                       id: dvt5w3a4cid6k
                     example: '1.0'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
       operationId: get-status
       x-stoplight:
         id: y6p8qc4ol12dx
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: id
+          description: id of thing
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                  x-stoplight:
+                    id: pu7j1dkpn8efh
+                '':
+                  type: string
+                  x-stoplight:
+                    id: lf2cjyd6o5cyg
   /demo:
     get:
       summary: Your GET endpoint
