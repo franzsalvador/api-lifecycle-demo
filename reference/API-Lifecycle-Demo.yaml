@@ -177,6 +177,32 @@ paths:
       operationId: get-status
       x-stoplight:
         id: y6p8qc4ol12dx
+  /demo:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  '':
+                    type: string
+                    x-stoplight:
+                      id: 7bjpzy9df7nab
+      operationId: get-demo
+      x-stoplight:
+        id: 8xqia0c04888j
+      description: this is a demo
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: id
+          description: id of entity
 components:
   schemas:
     User:
